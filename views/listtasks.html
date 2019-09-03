@@ -1,0 +1,43 @@
+<html>
+<head>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+</head>
+<style>
+    table,th,td {
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h1>List Users</h1> </br>
+    <h1> <a href="/">Home Page</a>
+        <a href="/inserttask">Insert new task</a>
+        <a href="/listtasks">List tasks</a>
+        <a href="/updatetask">Update task</a>
+        <a href="/deletetask">Delete task</a>
+        <a href="/deletecompleted">Delete complete</a>
+        <a href="/deleteOldComplete">delete Old Complete</a>
+    </h1>
+    <table>
+        <tr>
+            <td>taskID</td>
+            <td>taskName</td>
+            <td>AssignTo</td>
+            <td>DueDate</td>
+            <td>TaskStatus</td>
+            <td>TaskDes</td>
+        </tr>
+        <% for (let i=0;i<tasksDb.length;i++){ %>
+            <tr>
+                <td><%= tasksDb[i].taskID %> </td>
+                <td> <%= tasksDb[i].TaskName %> </td>
+                <td><%= tasksDb[i].AssignTo %></td>
+                <td><%= tasksDb[i].DueDate %></td>
+                <td><%= tasksDb[i].TaskStatus %></td>
+                <td><%= tasksDb[i].TaskDes %></td>
+            </tr>
+            <%}%>
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="style.css">
+        </head>
+<body>
+    <h1>Update User</h1></br>
+    <h1>
+        <a href="/">Home Page</a>
+        <a href="/inserttask">Insert new task</a>
+        <a href="/listtasks">List tasks</a>
+        <a href="/updatetask">Update task</a>
+        <a href="/deletetask">Delete task</a>
+        <a href="/deletecompleted">Delete complete</a>
+        <a href="/deleteOldComplete">delete Old Complete</a>
+    </h1>
+    <form action="/updatetaskdata" method="POST">
+        Old task ID <input type="text" method="POST" name="taskID" /> </br>
+        New Task Status <input type="text" method="POST" name="newStatus" /> </br>
+        <input type="submit" value="Submit" /> </br>
+    </form>
+</body>
+</html>
